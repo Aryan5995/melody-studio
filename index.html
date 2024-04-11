@@ -3,10 +3,601 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
     <title>My Website</title>
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="left-section">
+                <nav class="navigation">
+                    <ul>
+                        <li><img src="images/melody.png"</li>
+                        <li><img src="images/melody-removebg-preview.png"></li>
+                        <!-- <li class="fav"><a href="#">Favourites</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-section">
+                <nav class="right-navigation">
+                    <ul>
+                        
+                        <li>
+                            
+                            <div class="search-box">
+                                <input type="text" placeholder="Search..." class="search-input">
+                                <button class="search-button" aria-label="Search">
+                                    <i class="material-icons">search</i>
+                                </button>
+                                <button class="mic-button" aria-label="Voice Search">
+                                    <i class="material-icons">mic</i>
+                                </button>
+                            </div>
+                               
+                </li>
+                <li>
+                    <div class="notification">
+                        <button class="notification-button" aria-label="Notifications">
+                            <i class="material-icons">notifications</i>
+                        </button>
+                    </div>
+            </li>
+                <li>
+                <div class="user-account">
+                    <a href="#"><img src="images/myimage.jpg" alt="My Image"></a>
+                </div>
+                </li>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="content">
+            <!-- Main content area -->
+            <section class="image-cards">
+                <div class="image-card">
+                    <img  src="images/dhanda.jpg " alt="Image 1">
+                </div>
+                <div class="image-card">
+                    <img src="images/ap.jpg"alt="Image 2">
+                </div>
+                <div class="image-card">
+                    <img src="images/karan.jpg" alt="Image 3">
+                </div>
+            </section>
+           <!-- Latest Releases section -->
+<section class="latest-releases">
+    <h2>Latest Releases</h2>
+    <div class="release-cards">
+        <!-- First Row -->
+        <div class="release-card">
+            <div class="release-image">
+                <img src="images/ap.jpg" alt="Release 1">
+            </div>
+            <div class="release-details">
+                <div class="release-settings">
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <h3>Excuses</h3>
+                <p>Ap Dhillon</p>
+                <p>3.56</p>
+            </div>
+        </div>
+        <div class="release-card">
+            <div class="release-image">
+                <img src="images/dhanda.jpg" alt="Release 2">
+            </div>
+            <div class="release-details">
+                <div class="release-settings">
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <h3>No Mercy</h3>
+                <p>Dhanda Nyoli</p>
+                <p>4.56</p>
+            </div>
+            
+        </div>
+        <!-- Second Row -->
+        <div class="release-card">
+            <div class="release-image">
+                <img src="images/karan.jpg" alt="Release 3">
+            </div>
+            <div class="release-details">
+                <div class="release-settings">
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <h3>Admirin You</h3>
+                <p>Karan Aujla</p>
+                <p>4.46</p>
+            </div>
+            
+        </div>
+        <div class="release-card">
+            <div class="release-image">
+                <img src="images/album2.jpg" alt="Release 4">
+            </div>
+           
+            <div class="release-details">
+                <div class="release-settings">
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <h3>Bachke Bachke</h3>
+                <p>Karan Aujla</p>
+                <p>4.00</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Popular Artists section -->
+<section class="popular-artists">
+    <h2>Popular Artists</h2>
+    <div class="artist-container">
+        <div class="artist">
+            <div class="artist-image">
+                <img src="images/artist/arijit.jpg".jpg" alt="Artist 1">
+            </div>
+            <div class="artist-name">Arijit Singh</div>
+        </div>
+        <div class="artist">
+            <div class="artist-image">
+                <img src="images/artist/bad.jpg" alt="Artist 2">
+            </div>
+            <div class="artist-name">Baadshah</div>
+        </div>
+        <div class="artist">
+            <div class="artist-image">
+                <img src="images/artist/karan.jpg" alt="Artist 2">
+            </div>
+            <div class="artist-name">Karan Aujla</div>
+        </div>
+        <div class="artist">
+            <div class="artist-image">
+                <img src="images/artist/rahman.jpg" alt="Artist 2">
+            </div>
+            <div class="artist-name">AR Rahmaan</div>
+        </div>
+        <div class="artist">
+            <div class="artist-image">
+                <img src="images/artist/diljit.jpg" alt="Artist 2">
+            </div>
+            <div class="artist-name">Diljit Dosanjh</div>
+        </div>
+        
+    </div>
+</section>
+<div class="stations-container">
+    <div class="stations-logo-container">
+        <div class="stations-logo-img-container">
+
+        </div>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+            
+            <div class="img-1">
+
+            </div>
+           
+        </div>
+        <p class="stations-para">Love</p>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+           
+            <div class="img-1 img-2">
+
+            </div>
+           
+        </div>
+        <p class="stations-para">Retro</p>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+           
+            <div class="img-1 img-3">
+
+            </div>
+          
+        </div>
+        <p class="stations-para">Chill</p>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+            
+            <div class="img-1 img-4">
+
+            </div>
+          
+        </div>
+        <p class="stations-para">Workout</p>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+           
+            <div class="img-1 img-5">
+
+            </div>
+           
+        </div>
+        <p class="stations-para">Rock</p>
+    </div>
+
+    <div class="stations-img-container">
+        <div class="stations-img">
+            
+            <div class="img-1 img-6">
+
+            </div>
+           
+        </div>
+        <p class="stations-para">Pop</p>
+    </div>
+</div>
+
+<div class="genre-container">
+    <div class="genre-img-container">
+        <p>Party</p>
+    </div>
+
+    <div class="genre-img-container genre-img-2">
+        <p>Electronic</p>
+    </div>
+
+    <div class="genre-img-container genre-img-3">
+        <p>Road Trip</p>
+    </div>
+</div>
+
+<!--  Latest english container -->
+
+<div class="latest-english-container">
+    <div class="latest-english-header">
+        <p>Latest English</p>
+    </div>
+
+    <div class="latest-english-content">
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng1.jpeg" />
+            <p>Peaches</p>
+            <p>AUG 11,2017</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng2.jpeg" />
+            <p>Calm Down</p>
+            <p>MAY 16,2019</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng3.png" />
+            <p>Shape of You</p>
+            <p>AUG 05,2015</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng4.png" />
+            <p>Rockabye</p>
+            <p>NOV 11,2014</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng5.jpeg" />
+            <p>Friends</p>
+            <p>JAN 25,2016</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng6.jpeg" />
+            <p>Sorry</p>
+            <p>JUL 11,2017</p>
+        </div>
+    </div>
+</div>
+<div class="latest-english-container">
+    <div class="latest-english-header">
+        <p>Latest Hindi</p>
+    </div>
+
+    <div class="latest-english-content">
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesthin1.jpg" />
+            <p>Soulmate</p>
+            <p>AUG 11,2017</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesthin2.jpg" />
+            <p>Admirin You</p>
+            <p>MAY 16,2019</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesthin3.jpg" />
+            <p>Toxic</p>
+            <p>AUG 05,2015</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesteng4.png" />
+            <p>No Mercy</p>
+            <p>NOV 11,2014</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesthin5.jpg" />
+            <p>Samjhawan</p>
+            <p>JAN 25,2016</p>
+        </div>
+        <div class="latest-english-card-container">
+            <img src="images/stations/latesthin6.jpg" />
+            <p>Alfaaz</p>
+            <p>JUL 11,2017</p>
+        </div>
+    </div>
+</div>
+<!-- Fixed bottom section for audio player -->
+<!-- Fixed bottom section for audio player -->
+<div class="audio-player">
+    <div class="audio-info">
+        <img src="images/dhanda.jpg" alt="Song Image" class="song-image">
+        <div class="song-details">
+            <p class="current-song">Goat,Diljit Dosanjh</p>
+            <div class="control-icons">
+                <i class="fas fa-heart"></i> <!-- Heart icon -->
+                <i class="fas fa-trash-alt"></i> <!-- Discard icon -->
+                <i class="fas fa-step-backward"></i> <!-- Previous song icon -->
+                <audio controls autoplay class="audio-control">
+                    <source src="audio/song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <i class="fas fa-step-forward"></i> <!-- Next song icon -->
+                <i class="fas fa-redo-alt"></i> <!-- Loop icon -->
+                <i class="fas fa-ellipsis-h"></i> <!-- Options icon -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            
+           
+        </div>
+        <div class="sidebar">
+            <!-- Sidebar content -->
+            
+            <div id="queue-1" class="queue-container">
+                <div class="queue-header">
+                    <p>Queue</p>
+                    <div class="queue-btn-container">
     
+                        <!-- here label is acting as a button for dropdown effect -->
+                        <label for="mycheckbox">Queue <span><i class="fas fa-angle-down"></i></span></label>
+                        <input type="checkbox" id="mycheckbox">
+                        <div class="queue-btn-dropdown">
+                            <a href="">Playlists</a>
+                            <hr>
+                            <a href="">Favourite Songs</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="queue-elements-container">
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">01</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="https://rollingstoneindia.com/wp-content/uploads/2024/02/Karan-Aujla-Press-Image-scaled.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Admiring You</p>
+                                <p class="queue-artist-name">Karan Aujla</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+    
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <i class="fas currently-on-song fa-stream"></i>
+                            
+                            <!-- <img src="assets/css/Free_Download_Cool_Audio_Reacting_Spectrum_After_Effects_CC.mp4"> -->
+                            <div class="image-container">
+    
+                                <img class="queue-song-img" src="https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431" />
+                            
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Peaches</p>
+                                <p class="queue-artist-name">Justin Bieber</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">03</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="https://i.ytimg.com/vi/uDAjINEp8H8/sddefault.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">7 Rings</p>
+                                <p class="queue-artist-name">Ariana Grande</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">04</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Attention_%28Charlie_Puth_song%29_single_cover.svg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Attention</p>
+                                <p class="queue-artist-name">Charlie Puth</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">05</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="data:image/jpeg;base64,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" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Soulmate</p>
+                                <p class="queue-artist-name">Arijit Singh/p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">06</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="https://i1.sndcdn.com/artworks-000105985646-m758fl-t500x500.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Girls like You</p>
+                                <p class="queue-artist-name">Maroon 5</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">07</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="assets/queue/taylorswift.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Unstoppable</p>
+                                <p class="queue-artist-name">Sia</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">08</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="assets/queue/we'regood.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Toxic</p>
+                                <p class="queue-artist-name">AP Dhillon</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">09</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Shape Of You</p>
+                                <p class="queue-artist-name">Ed Sheeran</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">10</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="assets/queue/cheapthrills.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Cheap Thrills</p>
+                                <p class="queue-artist-name">Sia</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">11</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="assets/queue/roar.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Calm Down</p>
+                                <p class="queue-artist-name">Rema</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                    <div class="queue-element">
+                        <div class="song-image-container">
+                            <p class="queue-number">12</p>
+                            <div class="image-container">
+                                <img class="queue-song-img" src="assets/queue/starboy.jpg" />
+                                <i class="fas play-btn fa-play"></i>
+                            </div>
+                            <div class="song-and-artist-container">
+                                <p class="queue-song-name">Tum Se</p>
+                                <p class="queue-artist-name">Varun Jain</p>
+                            </div>
+                        </div>
+    
+                        <span class="nav-link">
+                            <button><i class="far wishlist-icon fa-heart"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <!-- Your footer content goes here -->
+    </footer>
 
 
 
@@ -14,7 +605,9 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     
 </body>

@@ -1,0 +1,785 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Style for the header */
+.header {
+    background-color:#242639; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Padding for content inside the header */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add some space around the content */
+}
+
+/* Style for the logo */
+
+.music-player {
+    display: flex; /* Display music player and favorites side by side */
+    align-items: center;
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v98/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 24px;
+}
+
+
+
+
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 30px 8px 10px;
+    border: none;
+    border-radius: 20px;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-button, .mic-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-button i, .mic-button i {
+    color: #fff;
+}
+
+.search-button:hover, .mic-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/* Style for navigation links */
+.navigation ul {
+    margin-left: -100px;
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Align navigation links in a row */
+}
+.right-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Align navigation links in a row */
+    margin-right:-180px;
+}
+
+.navigation ul li {
+    margin-right: 20px; 
+    font-size:larger;/* Add space between navigation items */
+}
+.navigation ul li img{
+    height:130px;
+    width:130px;
+    border-radius: 70%;
+    margin-left: -50px;
+     
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Style for notification bell */
+.notification {
+    
+    margin-left: 20px;
+    margin-bottom: -150px;
+     /* Add space between search bar and notification bell */
+}
+/* Your existing CSS styles */
+
+.notification {
+    position: relative;
+}
+
+.notification-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.notification-button i {
+    color: #fff;
+    font-size: 24px; /* Adjust size as needed */
+}
+
+/* Example of changing position */
+.notification {
+    position: relative;
+    
+    bottom: -20px;
+    right: 310px;
+    transform: translateY(-50%);
+}
+
+
+.notification a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style for user account */
+.user-account img {
+    width: 50px; /* Adjust size of user image */
+    border-radius: 50%; /* Make user image round */
+    margin-left: 20px; /* Add space between notification bell and user image */
+}
+
+/* Additional styles for music player */
+.music-player {
+    display: flex; /* Display music player and favorites side by side */
+    align-items: center;
+}
+/* Your existing CSS styles */
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #24273D;
+}
+
+.content {
+    flex: 1;
+    background-color: #242639;
+    padding: 20px;
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.sidebar {
+    width: 350px; /* Adjust the width of the sidebar */
+    background-color: #24273D;
+    padding: 20px;
+}
+.queue-container {
+    width: 95%;
+    margin-bottom: 2rem;
+}
+
+#queue-2 {
+    display: none;
+}
+
+.queue-header {
+    color: #CECFD3;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* implementing the dropdown(on queue button click) via checbox */
+
+
+/* hide the checkbox */
+
+.queue-header input {
+    display: none;
+}
+
+.queue-header label {
+    font-size: 0.8rem;
+    color: #51E2C2;
+}
+
+.queue-btn-container {
+    position: relative;
+}
+
+
+/* set position of dropdown absolute to the label to appear over other elements , set height 0 and overflow hidden add transition effect */
+
+.queue-btn-dropdown {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    top: 1.5rem;
+    left: -4rem;
+    background-color: white;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.queue-btn-dropdown a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+}
+
+
+/* on clicking the label dropdown will appear, make height non zero */
+
+#mycheckbox:checked~div {
+    height: 4.7rem;
+    padding: 0.3rem;
+}
+
+#mycheckbox2:checked~div {
+    height: 4.7rem;
+    padding: 0.3rem;
+}
+
+
+/* queue elements */
+
+.queue-elements-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.queue-element {
+    margin-bottom: 0.6rem;
+    width: 100%;
+    background-color: #1e222e98;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.song-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.queue-number {
+    font-size: 0.8rem;
+    color: #8092A1;
+    margin-right: 1rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.queue-song-img {
+    width: 3rem;
+    border-radius: 0.4rem;
+    margin-right: 1rem;
+}
+
+.queue-song-img~i {
+    transition: all 0.2s ease-in-out;
+}
+
+.queue-song-img~i:hover {
+    opacity: 0.9;
+    height: 1rem;
+}
+
+.queue-song-img:hover~i {
+    opacity: 0.9;
+    height: 1rem;
+}
+
+.play-btn {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    color: white;
+    top: 1rem;
+    left: 1rem;
+}
+
+.queue-song-name {
+    font-size: 0.9rem;
+    color: #F6F7F9;
+}
+
+.queue-artist-name {
+    font-size: 0.9rem;
+    color: #8A909D;
+}
+
+.wishlist-icon {
+    color: #92A6B3;
+}
+
+.currently-on-song {
+    color: #21B6D9;
+    transform: rotate(-90deg);
+    margin-right: 0.9rem;
+}
+
+
+/* CSS for image cards */
+.image-cards {
+    display: flex;
+}
+
+.image-card {
+    width: 330px; /* Set a specific width for each image card */
+    height: 250px
+    flex: 1;
+    margin-right: 10px; /* Adjust the spacing between image cards */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.image-card img {
+    width: 100%; 
+    height:70%;
+    /*
+     Make images fill the container */
+    height: 70%; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the images */
+}
+
+/* Scale the image card on hover */
+.image-card:hover {
+    transform: scale(1.4); /* Increase the scale on hover */
+}
+.fav{
+    margin-left: -200px;
+    font-weight: 300;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+/* CSS for latest releases section */
+/* Latest Releases section */
+.latest-releases {
+    margin-top: 20px;
+}
+
+.latest-releases h2 {
+    font-weight: 700;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Release Cards */
+.release-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.release-card {
+    flex: 1 0 calc(50% - 10px); /* Two cards per row with spacing */
+    margin: 0 10px 20px 0; /* Adjust margin for spacing between cards */
+    background-color:#242639;
+    border: 0.5 px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure images don't overflow */
+    display:flex;
+}
+.release-image {
+    width: 100px; /* Adjust width of image container */
+    height: 20px; /* Adjust height of image container */
+    flex: 0 0 150px; /* Set fixed width for image container */
+    position: relative;
+}
+
+
+.release-image img {
+    height: auto;
+    width: 100%; /* Make image fill container */
+     /* Maintain aspect ratio */
+}
+
+.release-details {
+    padding: 20px;
+}
+
+.release-details h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.release-details p {
+    color:white;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.latest-releases .release-card {
+    position: relative;
+}
+
+.latest-releases .release-settings {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1; /* Ensure the icon is above the text */
+}
+
+.latest-releases .release-details {
+    position: relative;
+}
+
+.latest-releases .release-details h3 {
+    margin-right: 30px; /* Ensure space for the settings icon */
+}
+
+.latest-releases .release-details p:last-child {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjust font size as needed */
+}
+.latest-releases .release-settings i {
+    color: white;
+}
+
+
+/* Popular Artists section */
+.popular-artists {
+    margin-top: 20px;
+}
+
+.popular-artists h2 {
+    color: white;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.artist-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly along the row */
+}
+
+.artist {
+    text-align: center; /* Center text horizontally */
+}
+.artist-container{
+    background-color:#242639;
+}
+
+.artist-image {
+    width: 150px; /* Adjust image size as needed */
+    height: 150px; /* Adjust image size as needed */
+    border-radius: 50%; /* Make image circular */
+    overflow: hidden; /* Hide overflowing parts of image */
+    margin-bottom: 10px; /* Add spacing between image and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.938); 
+}
+
+.artist-image img {
+    width: 100%; /* Make image fill container */
+    height: 100%; /* Make image fill container */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover container */
+}
+
+.artist-name {
+    font-weight: bold;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+/* stations #101743; */
+
+
+.stations-container {
+    width: 100%;
+    background-color:#1b1e3f ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+
+.stations-logo-container {
+    width: 18%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stations-logo-container:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.stations-logo-img-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/stations2-removebg-preview.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.stations-img-container {
+    width: 12%;
+    position: relative;
+}
+
+.stations-img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.stations-img:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.img-1 {
+    /* filter: blur(1.1px); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/stations/love.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.img-2 {
+    background-image: url(images/stations/retro.webp) ;
+}
+
+.img-3 {
+    background-image: url(images/stations/chill.jpg) ;
+}
+
+.img-4 {
+    background-image: url(images/stations/workout.webp) ;
+}
+
+.img-5 {
+    background-image: url(images/stations/rock.jpeg) ;
+}
+
+.img-6 {
+    background-image: url(images/stations/pop.webp);
+}
+
+.stations-para {
+    font-weight: lighter;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top: 50%;
+    margin-top: -5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+
+/* genre */
+
+.genre-container {
+    background-color: #101743;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.genre-img-container {
+    width: 32%;
+    height: 9rem;
+    background-image: url(images/stations/party.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.genre-img-container:hover {
+    background-size: 120% 120%;
+}
+
+.genre-img-container p {
+    color: #FAFAFB;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.genre-img-2 {
+    background-image: url(images/stations/electronic.jpg);
+}
+
+.genre-img-3 {
+    background-image: url(images/stations/road\ trip.jpg);
+}
+
+
+/* latest-english */
+
+.latest-english-container {
+    width: 100%;
+
+    margin-bottom: 2rem;
+    background-color: #24273D;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.latest-english-header {
+    width: 80%;
+    margin-left: 20px;
+}
+
+.latest-english-header p {
+    color: #CECFD3;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.latest-english-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+}
+
+.latest-english-card-container {
+    width: 14%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.latest-english-card-container img {
+    width: 100%;
+}
+
+.latest-english-card-container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FFFEFE;
+    font-size: 0.8rem;
+}
+/* CSS for fixed bottom section */
+/* CSS for fixed bottom section */
+/* CSS for fixed bottom section */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #454b75;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.song-details {
+    flex: 1;
+}
+
+.current-song {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.control-icons {
+    display: flex;
+    align-items: center;
+}
+
+.control-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.control-icons i:hover {
+    color: #555; /* Change color on hover */
+}
+
+.audio-control {
+    flex: 1;
+    margin: 0 10px;
+    width: auto;
+}
+
+.audio-control::-webkit-media-controls-panel {
+    background-color: transparent;
+    color:black;
+}
+
+/* Additional styling for control icons */
+.control-icons i {
+    background-color: #454b75;
+    border-radius: 50%;
+    padding: 8px;
+    transition: background-color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.control-icons i:hover {
+    background-color: #454b75; /* Change background color on hover */
+}
