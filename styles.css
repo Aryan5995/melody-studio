@@ -1,15 +1,117 @@
 /* Reset default margin and padding */
+
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: Arial;
+}
+.carousel__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    perspective: 300px;
+}
+.carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0px;
+    width: 500px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+.carousel__item:nth-child(1) {
+    background-image: url("images/khutti.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed; 
+  /* background-size: 50% 50%; */
+
+}
+.carousel__item:nth-child(2) {
+    /* background: linear-gradient(45deg, #2d35eb 0%, #fdbb2d 100%) */
+    background-image: url("images/karan.jpg");
+}
+.carousel__item:nth-child(3) {
+    /* background: linear-gradient(45deg, #2d35eb 0%, #22c1c3 100%);   */
+    background-image: url("images/ap.jpg");
+    
+}
+.carousel__item:nth-child(4) {
+    /* background: linear-gradient(45deg, #fdbb2d 0%, #904ed4 100%); */
+    background-image: url("images/dhanda.jpg");
+}
+.carousel__item:nth-child(5) {
+    /* background: linear-gradient(45deg, #22c1c3 0%, #904ed4 100%); */
+    background-image: url("images/Songs/Peaches.jpeg");
+}
+.carousel__item[data-pos="0"] {
+    z-index: 5;
+}
+.carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
+    opacity: 0.7;
+    filter: blur(1px) grayscale(10%);
+}
+.carousel__item[data-pos="-1"] {
+    transform: translateX(-40%) scale(0.9);
+    z-index: 4;
+}
+.carousel__item[data-pos="1"] {
+    transform: translateX(40%) scale(0.9);
+    z-index: 4;
+}
+.carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
+    opacity: 0.4;
+    filter: blur(3px) grayscale(20%);
+}
+.carousel__item[data-pos="-2"] {
+    transform: translateX(-70%) scale(0.8);
+    z-index: 3;
+}
+.carousel__item[data-pos="2"] {
+    transform: translateX(70%) scale(0.8);
+    z-index: 3;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.side-panel {
+    width: 100px; /* Set the width of the side panel */
+    background-color: transparent; /* Background color of the side panel */
+    padding: 20px; /* Padding inside the side panel */
+    position:absolute; /* Position the side panel */
+    height: 100%; /* Full height */
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+}
 
+.side-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+.side-panel ul button {
+    background: transparent;
+    padding: 0;
+}
 
 
 /* Style for the header */
 .header {
-    background-color:#242639; /* Dark background color */
+     /* background-color:#242639;  */
+    background-image:linear-gradient(rgb(104, 20, 1),rgb(1, 1, 58));
+
     color: #fff; /* Text color */
     padding: 10px 0; /* Padding for content inside the header */
 }
@@ -164,19 +266,22 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #24273D;
+    /* background-color: #24273D; */
+    background-image:linear-gradient(rgb(1, 1, 58),rgb(104, 20, 1),rgb(1, 1, 58));
+
 }
 
 .content {
     flex: 1;
-    background-color: #242639;
+    background-image:linear-gradient(top to bottom,navy,black);
     padding: 20px;
     margin-right: 20px; /* Adjust the margin as needed */
 }
 
 .sidebar {
     width: 350px; /* Adjust the width of the sidebar */
-    background-color: #24273D;
+    background-color: #24273D,#040512;
+    background-blend-mode:color-dodge;
     padding: 20px;
 }
 .queue-container {
@@ -285,7 +390,7 @@
 }
 
 .image-container {
-    position: relative;
+    /* position: ; */
 }
 
 .queue-song-img {
@@ -315,6 +420,10 @@
     color: white;
     top: 1rem;
     left: 1rem;
+}
+.nav-link button {
+    background-color: transparent;
+    border: none;
 }
 
 .queue-song-name {
@@ -379,7 +488,7 @@
     font-weight: 700;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -392,7 +501,8 @@
 .release-card {
     flex: 1 0 calc(50% - 10px); /* Two cards per row with spacing */
     margin: 0 10px 20px 0; /* Adjust margin for spacing between cards */
-    background-color:#242639;
+    /* background-color:#242639; */
+    background-image:linear-gradient(rgb(1, 1, 58),rgb(104, 20, 1));
     border: 0.5 px solid #ddd;
     border-radius: 5px;
     overflow: hidden; /* Ensure images don't overflow */
@@ -479,7 +589,7 @@
     text-align: center; /* Center text horizontally */
 }
 .artist-container{
-    background-color:#242639;
+    background-color:transparent;
 }
 
 .artist-image {
@@ -508,7 +618,7 @@
 
 .stations-container {
     width: 100%;
-    background-color:#1b1e3f ;
+    background-color:transparent ;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -610,7 +720,7 @@
 /* genre */
 
 .genre-container {
-    background-color: #101743;
+    background-color: transparent;
     width: 100%;
     margin-bottom: 2rem;
     display: flex;
@@ -664,7 +774,7 @@
     width: 100%;
 
     margin-bottom: 2rem;
-    background-color: #24273D;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -677,9 +787,9 @@
 
 .latest-english-header p {
     color: #CECFD3;
-    font-size: 24px;
+    font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .latest-english-content {
@@ -689,6 +799,7 @@
     align-items: flex-start;
     margin-bottom: 0.7rem;
     cursor: pointer;
+    font-size: 30px;
 }
 
 .latest-english-card-container {
@@ -698,26 +809,29 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    font-size:30px;
+    border-width: 2px;
+    border-color: black;
 }
 
 .latest-english-card-container img {
     width: 100%;
+    border-radius: 4px;
 }
 
 .latest-english-card-container p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #FFFEFE;
-    font-size: 0.8rem;
+    font-size: 17px;
 }
-/* CSS for fixed bottom section */
-/* CSS for fixed bottom section */
-/* CSS for fixed bottom section */
+
 .audio-player {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #454b75;
+    background-image: 
+    linear-gradient(rgb(104, 20, 1),rgb(1, 1, 58));
     border-top: 1px solid #ddd;
     padding: 10px;
 }

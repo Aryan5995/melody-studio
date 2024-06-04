@@ -9,7 +9,7 @@
 
 /* Style for the header */
 .header {
-    background-color:#242639; /* Dark background color */
+    background-image:linear-gradient(rgb(104, 20, 1),rgb(1, 1, 58));
     color: #fff; /* Text color */
     padding: 10px 0; /* Padding for content inside the header */
 }
@@ -187,19 +187,19 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #24273D;
+    background-image:linear-gradient(rgb(1, 1, 58),rgb(4, 12, 50),rgb(1, 1, 58));
 }
 
 .content2 {
     flex: 1;
-    background-color: #242639;
-    padding: 20px;
-    margin-right: 20px; /* Adjust the margin as needed */
+    background-image:linear-gradient(top to bottom,navy,black);
+    
+     /* Adjust the margin as needed */
 }
 
 .sidebar2 {
     width: 350px; /* Adjust the width of the sidebar */
-    background-color: #24273D;
+    background-color: #24273D,#040512;
     padding: 20px;
 }
 
@@ -209,7 +209,8 @@ main {
 /* playlist-card */
 
 .playlist-card-container {
-    width: 100%;
+    width: 1000px;
+    height:400px;
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -219,7 +220,7 @@ main {
 }
 
 .blur-effect-container {
-    width: 100%;
+    width: 150%;
     height: 45vh;
     position: relative;
     background-color: #141A40;
@@ -233,12 +234,12 @@ main {
 
 
 .playlist-content-container {
-    width: 100%;
+    width: 200%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #141A40;
-    padding: 2rem;
+    background-color: none;
+    
 }
 
 .play-all-btn {
@@ -277,8 +278,6 @@ main::-webkit-scrollbar {
 
 
 
-/* media query for medium devices */
-
 @media (min-width: 768px) {
     html {
         font-size: 13px;
@@ -299,9 +298,9 @@ main::-webkit-scrollbar {
         flex-direction: row;
     }
     .for-responsiveness {
-        width: 100%;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        width: 150%;
+        padding-left: 0.1rem;
+        padding-right: 0.2rem;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -316,20 +315,19 @@ main::-webkit-scrollbar {
         overflow-y: auto;
     }
     .similar-artist-cards-container {
-        width: 100%;
+        width: 70%;
         flex-direction: column;
-        /* align-items: center; */
+         align-items: center; 
     }
     .similar-artist-card {
-        width: 100%;
     }
     .playlist-card-container {
-        width: 100%;
+        width: 300%;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         height: 47vh;
-        background-color: #141A40;
+        background-color:linear-gradient(#04083d,#660451);
     }
     .blur-effect-container {
         width: 40%;
@@ -352,7 +350,7 @@ main::-webkit-scrollbar {
         box-shadow: 0 -2rem 4rem 2rem #141A40 inset;
     }
     .playlist-content-container {
-        width: 60%;
+        width: 200%;
         padding: 1rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -417,7 +415,7 @@ main::-webkit-scrollbar {
 .queue-container2 {
     width: 100%;
     margin-bottom: 2rem;
-}
+} */
 
 
 /* queue elements */
@@ -449,12 +447,12 @@ main::-webkit-scrollbar {
 .queue-element2 {
     margin-bottom: 0.6rem;
     width: 100%;
-    background-color: #24273D;
+    background-color:;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
 }
 
 #queue-element-2 {
@@ -476,13 +474,15 @@ main::-webkit-scrollbar {
 }
 
 .image-container {
-    position: relative;
+    position:relative;
 }
+
 
 .queue-song-img {
     width: 3rem;
     border-radius: 0.4rem;
     margin-right: 1rem;
+    position: fixed;
 }
 
 .queue-song-img~i {
@@ -680,6 +680,134 @@ main::-webkit-scrollbar {
     font-size: 0.8rem;
     color: black;
 }
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: 
+    linear-gradient(rgb(104, 20, 1),rgb(1, 1, 58));
+
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.song-details {
+    flex: 1;
+}
+
+.current-song {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.control-icons {
+    display: flex;
+    align-items: center;
+}
+
+.control-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.control-icons i:hover {
+    color: #555; /* Change color on hover */
+}
+
+.audio-control {
+    flex: 1;
+    margin: 0 10px;
+    width: auto;
+}
+
+.audio-control::-webkit-media-controls-panel {
+    background-color: transparent;
+    color:black;
+}
+
+/* Additional styling for control icons */
+.control-icons i {
+    background-color: #454b75;
+    border-radius: 50%;
+    padding: 8px;
+    transition: background-color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.control-icons i:hover {
+    background-color: #454b75; /* Change background color on hover */
+}
+/* styles2.css */
+
+/* Add styles for your dynamic elements here */
+
+.queue-element2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.song-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.queue-number2 {
+    margin-right: 10px;
+}
+
+.song-details-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.song-title2, .song-artist2 {
+    margin: 0;
+}
+
+.like-icon {
+    margin-left: 20px;
+}
+
+.similar-artist-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.image-container2 {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.artist-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 
 

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+ <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
     <title>My Website</title>
 </head>
@@ -18,7 +22,6 @@
                     <ul>
                         <li><img src="images/melody.png"</li>
                         <li><img src="images/melody-removebg-preview.png"></li>
-                        <!-- <li class="fav"><a href="#">Favourites</a></li> -->
                     </ul>
                 </nav>
             </div>
@@ -56,19 +59,25 @@
         </div>
     </header>
     <div class="main-content">
-        <div class="content">
-            <!-- Main content area -->
-            <section class="image-cards">
-                <div class="image-card">
-                    <img  src="images/dhanda.jpg " alt="Image 1">
-                </div>
-                <div class="image-card">
-                    <img src="images/ap.jpg"alt="Image 2">
-                </div>
-                <div class="image-card">
-                    <img src="images/karan.jpg" alt="Image 3">
-                </div>
-            </section>
+        <div class="side-panel">
+            <!-- Side panel content here -->
+            <ul>
+                <li><a href="#"><button><i class="fa-solid fa-house"></i></button></a></li>
+                <li><a href="#"><button><i class="fa-regular fa-bell"></i></button></a></li>
+                <li><a href="#"><button><i class="fa-solid fa-user"></i></button></a></li>
+                <li><a href="#"><button><i class="fa-solid fa-bars"></i></button></a></li>
+            </ul>
+        </div>
+<div class="content">
+            <div class="carousel">
+                <ul class="carousel__list">
+                  <li class="carousel__item" data-pos="-2">1</li>
+                  <li class="carousel__item" data-pos="-1">2</li>
+                  <li class="carousel__item" data-pos="0">3</li>
+                  <li class="carousel__item" data-pos="1">4</li>
+                  <li class="carousel__item" data-pos="2">5</li>
+                </ul>
+              </div>
            <!-- Latest Releases section -->
 <section class="latest-releases">
     <h2>Latest Releases</h2>
@@ -335,7 +344,7 @@
         </div>
     </div>
 </div>
-<!-- Fixed bottom section for audio player -->
+
 <!-- Fixed bottom section for audio player -->
 <div class="audio-player">
     <div class="audio-info">
@@ -602,7 +611,7 @@
 
 
 
-
+    <script src="script.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
