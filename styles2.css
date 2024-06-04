@@ -313,6 +313,7 @@ main::-webkit-scrollbar {
         width: 34%;
         height: 75vh;
         overflow-y: auto;
+        scrollbar-width: none;
     }
     .similar-artist-cards-container {
         width: 70%;
@@ -412,10 +413,13 @@ main::-webkit-scrollbar {
 
 /* queue */
 
+
+
 .queue-container2 {
     width: 100%;
     margin-bottom: 2rem;
-} */
+    scrollbar-width: none;
+} 
 
 
 /* queue elements */
@@ -447,7 +451,7 @@ main::-webkit-scrollbar {
 .queue-element2 {
     margin-bottom: 0.6rem;
     width: 100%;
-    background-color:;
+    /* background-color:; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -473,16 +477,14 @@ main::-webkit-scrollbar {
     margin-right: 1rem;
 }
 
-.image-container {
-    position:relative;
-}
+
 
 
 .queue-song-img {
     width: 3rem;
     border-radius: 0.4rem;
     margin-right: 1rem;
-    position: fixed;
+   
 }
 
 .queue-song-img~i {
